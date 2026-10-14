@@ -1,0 +1,89 @@
+# ═══════════════════════════════════════════════════════════════
+#  .gitignore — alzheimer-diagnostic-pathways
+#  Python + React project
+# ═══════════════════════════════════════════════════════════════
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+*.egg
+.eggs/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ── Node / React ──────────────────────────────────────────────
+node_modules/
+build/
+dist/
+.next/
+.cache/
+.parcel-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+
+# ── Environment & secrets ─────────────────────────────────────
+# Never commit API keys, credentials, or environment config.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# ── Datasets (large / restricted) ─────────────────────────────
+# Do NOT commit restricted, licensed, or large datasets.
+# ADNI, OASIS, and similar datasets must be stored locally in
+# datasets/ or accessed via a DVC remote / cloud registry.
+datasets/
+*.h5
+*.hdf5
+*.parquet
+*.nii
+*.nii.gz
+*.dcm
+
+# NOTE: Small, non-sensitive reference CSVs (e.g., scoring
+# rubrics, lookup tables with no patient data) MAY be committed.
+# Do NOT use this repo to store raw or derived patient data.
+
+# ── ML model artifacts ────────────────────────────────────────
+models/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.pb
+mlruns/
+mlartifacts/
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── IDE / Editor ──────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── OS noise ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
